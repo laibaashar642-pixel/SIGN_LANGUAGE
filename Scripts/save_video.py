@@ -9,11 +9,13 @@ import os
 import cv2
 class Video_Saver:
        def __init__(self,save_name,save_dir,cap) :
+        self.frame_count=0
         self.cap=cap
         self.save_dir=save_dir
         self.save_name=save_name
         self.out=None
-       def VideoSave(self):
+       def create_writer(self):
+           
            os.makedirs(self.save_dir, exist_ok=True)
            video_path = os.path.join(self.save_dir, f"{self.save_name}.mp4")
         #Delete process video if its exist
