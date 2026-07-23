@@ -143,6 +143,32 @@ pip install -r requirements.txt
 
 ---
 
+## Model Weights
+
+Trained model weights are not included in this GitHub repository due to file size restrictions. They are hosted on Google Drive and can be downloaded using the `gdown` library.
+
+Install `gdown`:
+
+```bash
+pip install gdown
+```
+
+Download the weights folder:
+
+```bash
+gdown --folder https://drive.google.com/drive/folders/1HKOsC-PLztQSxn0p4_V3BlQFQqnTuqg5 -O ./drive_download
+```
+
+Copy the trained model into the project's `Weights/` folder so it matches the structure used in the Usage section below:
+
+```bash
+cp drive_download/Weights/best_words.pt Weights/
+```
+
+After this step, your project structure will match the one shown above, with `Weights/best_words.pt` ready to use.
+
+---
+
 ## Usage
 
 ### Webcam Detection
