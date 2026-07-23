@@ -150,14 +150,25 @@ Trained model weights are not included in this GitHub repository due to file siz
 Install `gdown`:
 
 ```bash
-pip install gdown
+pip install --upgrade --no-cache-dir gdown
 ```
 
-Download the weights folder:
+Download the weights folder (Python):
 
-```bash
-gdown --folder https://drive.google.com/drive/folders/1HKOsC-PLztQSxn0p4_V3BlQFQqnTuqg5 -O ./drive_download
+```python
+import gdown
+
+gdown.download_folder(
+    "https://drive.google.com/drive/folders/1HKOsC-PLztQSxn0p4_V3BlQFQqnTuqg5",
+    output="drive_download",
+    quiet=False,
+    use_cookies=False
+)
 ```
+
+> Note: `use_cookies=False` avoids a common Colab/gdown authentication issue where folder downloads silently return an HTML error page instead of the actual files.
+
+This will create a `drive_download/` folder containing `Results/`, `Sample_Test/`, and `Weights/` (with `best_sign.pt` and `best_words.pt`).
 
 Copy the trained model into the project's `Weights/` folder so it matches the structure used in the Usage section below:
 
