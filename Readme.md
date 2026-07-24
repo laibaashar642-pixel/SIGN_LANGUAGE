@@ -12,12 +12,6 @@ This project is a real-time Sign Language Detection system developed using the U
 
 <img width="480" height="360" alt="Sign Language Detection Demo" src="https://github.com/user-attachments/assets/bb3c3b71-cac1-4556-875b-f3d97b7b8111" />
 
-### Full Video
-
-https://github.com/user-attachments/assets/6f218635-88bc-43ca-8668-b16a039dea2c
-
----
-
 ## Features
 
 - Real-time webcam detection
